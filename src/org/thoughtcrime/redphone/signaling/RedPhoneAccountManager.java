@@ -72,7 +72,7 @@ public class RedPhoneAccountManager {
     String body = JsonUtils.toJson(attributes);
 
     Request request = new Request.Builder()
-        .url(baseUrl + "/api/v1/accounts/token/" + verificationToken)
+        .url(baseUrl + "/v1/accounts/token/" + verificationToken)
         .put(RequestBody.create(MediaType.parse("application/json; charset=utf-8"), body))
         .header("Authorization", "Basic " + Base64.encodeBytes((login + ":" + password).getBytes()))
         .build();
